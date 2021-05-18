@@ -20,7 +20,8 @@ public class BatchApplication implements CommandLineRunner{
 	}
 	@Override
 	public void run(String... args) throws Exception {
-		/*args = new String[2];
+		/* TEST
+		args = new String[2];
 		args[0] = "ExampleBatchService" ;
 		args[1] = "2" ;*/
 		log.info("CommandLineRunner: " + Arrays.toString(args));
