@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: batch-demo-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: batch-demo
+  template:
+    metadata:
+      name: batch-demo-pod
+      labels:
+        app: batch-demo
+    spec:
+      containers:
+        - name: batch-demo-container
+          image: 268081345066.dkr.ecr.ap-northeast-2.amazonaws.com/rest-demo-order1:v1

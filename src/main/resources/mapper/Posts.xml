@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.batch.repository.PostsRepository">
+
+    <update id="updatePostsModifiedDate" parameterType="map" >
+        update POSTS
+           set modified_date = SYSDATE()
+             , title='title'
+        <if test="ID != null">
+            where id = #{ID}
+        </if>
+    </update>
+
+</mapper>
